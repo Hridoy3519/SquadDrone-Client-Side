@@ -1,0 +1,21 @@
+.testimonial .carousel-item::before{
+    /* background: #673BB7; */
+    background: transparent;
+    z-index: 1;
+}
+
+.testimonial .carousel-item {
+    /* background-color: #673BB7; */
+    padding: 40px 0;
+}
+
+.review{
+    width: 60%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width:688px) {
+    .review{
+        width: 100%;
+    }
+}

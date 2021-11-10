@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./ProductCard.css";
 const ProductCard = ({ product }) => {
   const { title, tagline, price, rating, user, img } = product;
-  const { CameraResolution } = product.specifications;
   return (
     <Col>
       <Card className="h-100">
