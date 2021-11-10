@@ -1,0 +1,32 @@
+.heading h1{
+    color: #290F67;
+    margin-bottom: 2px;
+    
+}
+
+.heading p{
+    margin: 5px 0;
+    letter-spacing: 0.15rem;
+    font-size: 18px;
+}
+
+.upper-underline{
+    width: 180px;
+    height: 2px;
+    background: black;
+    margin: 0 auto;
+}
+
+.middle-underline{
+    width: 150px;
+    height: 2px;
+    background: black;
+    margin: 2px auto;
+}
+
+.lower-underline{
+    width: 120px;
+    height: 2px;
+    background: black;
+    margin: 2px auto;
+}

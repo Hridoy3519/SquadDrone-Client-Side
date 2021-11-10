@@ -1,0 +1,39 @@
+.card-title{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.text-gray{
+    color: gray;
+}
+
+.card{
+    border: none;
+}
+
+.card-body{
+    padding-bottom: 6px;
+}
+
+.card-body p{
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.card-footer{
+    background: white;
+    padding: 0 10px;
+    border: none;
+}
+
+.fa-star{
+    color: gold;
+}
+
+.rating-text{
+    font-size: 15px;
+}
+
+.colored-text{
+    color:  #290F67;;
+}
