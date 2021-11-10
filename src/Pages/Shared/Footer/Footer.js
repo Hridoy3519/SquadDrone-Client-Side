@@ -30,14 +30,14 @@ const Footer = () => {
                 target="_blank"
                 href="https://www.facebook.com/hridoy.chowdhury.3701/"
               >
-                <i class="fab fa-facebook"></i>
+                <i className="fab fa-facebook"></i>
               </a>
               <a target="_blank" href="">
-                <i class="fab fa-instagram"></i>
+                <i className="fab fa-instagram"></i>
               </a>
               <a target="_blank" href="https://www.linkedin.com/in/hridoy3519/">
                 {" "}
-                <i class="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin"></i>
               </a>
             </div>
           </Col>

@@ -6,10 +6,10 @@ import Aos from 'aos';
 import "aos/dist/aos.css";
 const Products = () => {
   const [products, setProducts] = useState([]);
-
+  const size=6;
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/Hridoy3519/json-data/main/services.json"
+      `http://localhost:5000/products?size=${size}`
     )
       .then((res) => res.json())
       .then((data) => setProducts(data));

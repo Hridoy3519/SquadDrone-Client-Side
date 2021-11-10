@@ -9,7 +9,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/Hridoy3519/json-data/main/doctor.json"
+      "http://localhost:5000/reviews"
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));
