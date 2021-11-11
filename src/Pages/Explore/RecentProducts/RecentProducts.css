@@ -1,3 +1,7 @@
 .recent-product-title{
     font-size: 14px;
 }
+
+.recent-product-card{
+    border: none;
+}

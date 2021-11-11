@@ -1,11 +1,11 @@
 import React from 'react';
+import PageHeader from '../../Shared/PageHeader/PageHeader';
 import AllProducts from '../AllProdcuts/AllProducts';
-import ExploreBanner from '../ExploreBanner/ExploreBanner';
 
 const Explore = () => {
     return (
         <div>
-            <ExploreBanner/>
+            <PageHeader page="All products"></PageHeader>
             <AllProducts></AllProducts>
         </div>
     );

@@ -4,7 +4,7 @@ import "./RecentProducts.css";
 const RecentProducts = ({ product }) => {
   const { img, title, rating, price } = product;
   return (
-    <div className="card mb-4" style={{ maxWidth: 540}}>
+    <div className="card mb-4 recent-product-card" style={{ maxWidth: 540}}>
       <div className="row g-0">
         <div className="col-md-4">
           <img src={img} className="img-fluid rounded-start" alt="..." />
