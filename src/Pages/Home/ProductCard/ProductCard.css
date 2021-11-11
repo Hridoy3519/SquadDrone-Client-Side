@@ -16,13 +16,13 @@
 }
 
 .customized-card:hover{
-    background-color: #421f96;
+    /* background-color: #421f96; */
     transform: translateY(-10px);
-    color: white;
+    /* color: white; */
 }
 
 .customized-card:hover .customized-card-footer{
-    background-color: #421f96;
+    /* background-color: #421f96; */
     border: none;
 }
 

@@ -1,0 +1,25 @@
+.purchase-form input{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    font-size: 18px;
+    color: #421F96;
+    border-bottom: 2px solid #421F96;
+}
+
+.purchase-form {
+    width: 70%;
+    border: none;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.purchase-form input:focus{
+    border: none;
+    border-bottom: 2px solid #421F96;
+    outline: none;
+}
+
+.purchase-btn{
+    background-color: #421F96 !important;
+}

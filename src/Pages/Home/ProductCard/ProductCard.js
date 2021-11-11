@@ -4,7 +4,7 @@ import Rating from "react-rating";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
 const ProductCard = ({ product }) => {
-  const { title, tagline, price, rating, user, img } = product;
+  const { title, tagline, price, rating, user, img,key } = product;
   return (
     <Col>
       <Card className="h-100 customized-card">
@@ -27,7 +27,7 @@ const ProductCard = ({ product }) => {
             </h5>
             <h4 className="price-text">${price}.00</h4>
           </div>
-          <Link>
+          <Link to={`purchase/${key}`}>
             <Button className="w-100 customized-btn2">Purchase</Button>
           </Link>
         </Card.Footer>
