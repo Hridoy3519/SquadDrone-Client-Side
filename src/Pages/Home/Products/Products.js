@@ -20,7 +20,7 @@ const Products = () => {
 },[])
 
   return (
-    <Container data-aos="fade-left" className="my-5">
+    <Container id="products" data-aos="fade-left" className="my-5">
       <div className="mb-5 heading">
         <h1>Collections</h1>
         <div className="upper-underline"></div>

@@ -1,30 +1,26 @@
 .footer {
-    background-color: #f7f3f3;
+    background-color: #272727;
     /* background-color: #25262C; */
     color: #0d0227;
   }
+
+  .footer h3, .footer h6{
+    color: white;
+  }
   
   .footer p {
-    font-size: 16px;
-    color: #0d0227;
+    font-size: 17px;
+    color: #757171;
     /* color: #0d0227; */
   }
   
-  .footer h5 {
-    font-size: 18px;
-    color: #0d0227;
-    font-weight: bolder;
-  }
-  
-  .footer h6 {
-    font-size: 16px;
-    color: #0d0227;
-  }
-  .footer h6:hover {
-    color: black;
+  .footer p:hover {
+    color: white;
+    text-decoration: underline;
     cursor: pointer;
     transition: 0.3s all linear;
   }
+
   
   .down {
     padding: 60px 0;
@@ -32,6 +28,7 @@
   
   .copyright {
     text-align: center;
+    color: white;
   }
 
   .socials a{
@@ -39,5 +36,6 @@
     margin-right: 10px;
   }
   .socials a:hover{
-    color: #0d0227;
+    color: white;
+    transition: 0.3s all linear;
   }

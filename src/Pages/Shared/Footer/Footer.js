@@ -6,25 +6,44 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="down">
-          <Col md={2}>
-            <h4>Resources</h4>
-            <h6>Book Now</h6>
-            <h6>Services</h6>
-            <h6>Contact Us</h6>
+          <Col md={2} className="text-start">
+            <div>
+              <h3>Contact Us</h3>
+              <div className="my-4">
+                <h6>Address</h6>
+                <p>Downtown, Lamabazar, Sylhet</p>
+              </div>
+              <div className="my-4">
+                <h6>Email Us</h6>
+                <p>drone@email.com</p>
+              </div>
+              <div className="my-4">
+                <h6>Call Us</h6>
+                <p>(+880)176532xxxx</p>
+              </div>
+            </div>
           </Col>
-          <Col md={2}>
-            <h4>Information</h4>
-            <h6>New Destinations</h6>
-            <h6>Upcoming Tour</h6>
+          <Col md={2} className="text-start">
+            <div>
+              <h3 className="mb-4">Latest News</h3>
+              <p>Become an Affiliate</p>
+              <p>About Drone</p>
+              <p>New Products</p>
+              <p>Our Team</p>
+            </div>
           </Col>
-          <Col md={2}>
-            <h4>About Us</h4>
-            <h6>About US</h6>
-            <h6>Contact Us</h6>
+          <Col md={2} className="text-start">
+          <div>
+              <h3 className="mb-4">Our Services</h3>
+              <p>About Us</p>
+              <p>Testimonials</p>
+              <p>Shops</p>
+              <p>Our Team</p>
+            </div>
           </Col>
           <Col md={4}>
-            <p>Explore the unknowns with us.</p>
-            <h4>Hridoy Chowdhury</h4>
+            <p>Explore the cinematic Experience</p>
+            <h6>Hridoy Chowdhury</h6>
             <div className="socials">
               <a
                 target="_blank"

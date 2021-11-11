@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 const Navigation = () => {
   //fixed navbar
@@ -21,12 +22,10 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
+            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/explore">Explore</Nav.Link>
+            <Nav.Link as={NavLink} to="/#products">Products</Nav.Link>
+            <Nav.Link href="#deets">Reviews</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

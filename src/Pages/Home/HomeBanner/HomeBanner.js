@@ -11,15 +11,16 @@ const HomeBanner = () => {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>Our Drone's uses cutting edge Technologies &</h3>
-          <h3>Products to get the best result</h3>
-          <Button>Explore</Button>
+          <h1>ENJOY THE MOST CINEMATIC EXPERIENCE</h1>
+          <p>Our Drone's uses cutting edge Technologies &</p>
+          <p>Products to get the best result</p>
+          <Button className="mt-3">Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.ibb.co/bXQsGSJ/aaron-burden-0f-A3g-VTGwj-Q-unsplash.jpg"
+          src="https://i.ibb.co/zxNpsvn/banner-4.jpg"
           alt="Second slide"
         />
 
@@ -31,7 +32,7 @@ const HomeBanner = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://i.ibb.co/bXQsGSJ/aaron-burden-0f-A3g-VTGwj-Q-unsplash.jpg"
+          src="https://i.ibb.co/FxXFqZJ/dronebanner3.jpg"
           alt="Third slide"
         />
 
