@@ -3,23 +3,23 @@ import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./AllProductsCard.css";
 const AllProductsCard = ({ product }) => {
-  const { title, tagline, price, rating, user, img } = product;
+  const { title, tagline, price, img } = product;
   return (
     <Col>
-      <Card className="h-100">
-        <Card.Img variant="top" src={img} />
+      <Card className="h-100 all-product-card">
+        <Card.Img className="all-product-card-img" variant="top" src={img} />
         <Card.Body>
-          <Card.Title className="text-start"> {title}</Card.Title>
+          <Card.Title className="text-start" id="title"> {title}</Card.Title>
           <p className="text-start">
             <span className="tagname">{tagline}</span>
           </p>
         </Card.Body>
-        <Card.Footer className="d-flex justify-content-between align-items-center">
+        <Card.Footer className="d-flex justify-content-between align-items-center all-product-card-footer">
           <div className="d-flex justify-content-between align-items-end">
-            <h4 className="colored-text">Price: ${price}</h4>
+            <h4 className="price-text">${price}.00</h4>
           </div>
           <Link>
-            <Button>Purchase</Button>
+            <Button className="drone-squad-customized-btn1">Purchase</Button>
           </Link>
         </Card.Footer>
       </Card>

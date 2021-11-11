@@ -2,3 +2,11 @@
     background: linear-gradient(rgba(1, 21, 48, 0.8), rgba(0, 0, 0, 0.9)), url(https://i.ibb.co/FxXFqZJ/dronebanner3.jpg) center/cover no-repeat;
     height: 40vh;
 }
+
+.heading{
+    color: white;
+}
+
+.page{
+    color: #F65B47;
+}

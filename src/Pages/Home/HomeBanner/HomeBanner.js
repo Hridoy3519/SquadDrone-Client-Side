@@ -25,8 +25,10 @@ const HomeBanner = () => {
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h1>ENJOY THE MOST CINEMATIC EXPERIENCE</h1>
+          <p>Our Drone's uses cutting edge Technologies &</p>
+          <p>Products to get the best result</p>
+          <Button className="mt-3">Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,10 +39,10 @@ const HomeBanner = () => {
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h1>ENJOY THE MOST CINEMATIC EXPERIENCE</h1>
+          <p>Our Drone's uses cutting edge Technologies &</p>
+          <p>Products to get the best result</p>
+          <Button className="mt-3">Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

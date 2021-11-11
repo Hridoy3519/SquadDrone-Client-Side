@@ -1,4 +1,43 @@
 .tagname{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
+}
+
+#title{
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.all-product-card{
+   overflow:hidden;
+   transition: 0.3s all linear;
+}
+
+.all-product-card-img{
+    overflow: hidden;
+    transition: 0.25s all linear;
+}
+
+.all-product-card:hover{
+    transform: translateY(-10px);
+}
+
+.all-product-card:hover .all-product-card-img{
+    transform: scale(1.1);
+}
+
+.drone-squad-customized-btn1{
+    background-color: #F65B47;
+    border: 2px solid black;
+  }
+
+.drone-squad-customized-btn1:hover{
+    background: transparent;
+    border: 2px solid #F65B47;
+    color: black;
+    transition: 0.3s all linear;
+}
+
+.price-text{
+    color: #F65B47;
 }

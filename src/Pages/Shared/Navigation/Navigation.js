@@ -22,10 +22,10 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-            <Nav.Link as={NavLink} to="/explore">Explore</Nav.Link>
-            <Nav.Link as={NavLink} to="/#products">Products</Nav.Link>
-            <Nav.Link href="#deets">Reviews</Nav.Link>
+            <Nav.Link as={NavLink} style={{color : 'white'}} to="/">Home</Nav.Link>
+            <Nav.Link as={NavLink} style={{color : 'white'}} to="/explore">Explore</Nav.Link>
+            <Nav.Link as={NavLink} style={{color : 'white'}} to="/#products">Products</Nav.Link>
+            <Nav.Link as={NavLink} style={{color : 'white'}} to="/#products">Reviews</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
