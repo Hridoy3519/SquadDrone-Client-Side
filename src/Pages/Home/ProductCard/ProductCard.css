@@ -7,7 +7,7 @@
     color: gray;
 }
 
-.card{
+.customized-card, .all-product-card{
     border: none;
 }
 

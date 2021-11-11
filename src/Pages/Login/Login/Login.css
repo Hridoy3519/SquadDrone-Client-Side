@@ -1,0 +1,15 @@
+.google-btn{
+    background: transparent;
+    color: black;
+}
+
+.google-btn img{
+    margin-bottom:3px;
+    margin-right:10px
+}
+
+.google-btn:hover{
+    background:transparent;
+    color: black;
+    border: 1px solid blueviolet;
+}

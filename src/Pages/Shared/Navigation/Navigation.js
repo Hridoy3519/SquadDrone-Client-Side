@@ -25,7 +25,7 @@ const Navigation = () => {
             <Nav.Link as={NavLink} style={{color : 'white'}} to="/">Home</Nav.Link>
             <Nav.Link as={NavLink} style={{color : 'white'}} to="/explore">Explore</Nav.Link>
             <Nav.Link as={NavLink} style={{color : 'white'}} to="/#products">Products</Nav.Link>
-            <Nav.Link as={NavLink} style={{color : 'white'}} to="/#products">Reviews</Nav.Link>
+            <Nav.Link as={NavLink} style={{color : 'white'}} to="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

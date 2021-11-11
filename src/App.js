@@ -10,6 +10,8 @@ import Navigation from './Pages/Shared/Navigation/Navigation';
 import Home from './Pages/Home/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Explore from './Pages/Explore/Explore/Explore';
+import Login from './Pages/Login/Login/Login';
+import Signup from './Pages/Login/Signup/Signup';
 
 function App() {
   return (
@@ -25,6 +27,12 @@ function App() {
           </Route>
           <Route path="/explore">
             <Explore/>
+          </Route>
+          <Route path="/login">
+            <Login/>
+          </Route>
+          <Route path="/signup">
+            <Signup/>
           </Route>
         </Switch>
         <Footer/>
