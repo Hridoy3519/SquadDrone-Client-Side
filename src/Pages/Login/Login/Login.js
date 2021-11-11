@@ -1,9 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 import "./Login.css";
 const Login = () => {
+  const [loginData, setLoginData] = useState({});
+  const {googleSignIn, logIn} = useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+
+  const handleLogin = (e) => {
+    logIn(loginData.email, loginData.password, location, history);
+  };
+
+  const handleOnBlur = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+
+  const handleGoogleSignIn = (e) => {
+    googleSignIn(history,location);
+  };
   return (
     <div>
       <PageHeader page="Login"></PageHeader>
@@ -18,16 +41,17 @@ const Login = () => {
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label className="text-start">Email Address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter Email" />
+                  <Form.Control onBlur={handleOnBlur} type="email" name="email" placeholder="Enter Email" />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control onBlur={handleOnBlur} type="password" name="password" placeholder="Password" />
                 </Form.Group>
                 <Button
                   onClick={(e) => {
                     e.preventDefault();
+                    handleLogin();
                   }}
                   className="w-100"
                   variant="primary"
@@ -40,7 +64,7 @@ const Login = () => {
                 Need an Account? <Link to="/signup">Sign Up</Link>
               </div>
               <div className="text-center mt-2">
-                <Button className="google-btn">
+                <Button className="google-btn" onClick={handleGoogleSignIn}>
                   <img
                     width="20px"
                     alt="Google sign-in"

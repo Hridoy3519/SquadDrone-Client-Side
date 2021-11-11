@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import useAuth from "../../../Hooks/useAuth";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 
 const Signup = () => {
+  const [loginData, setLoginData] = useState({});
+  const { googleSignIn, handleRegisterUser, setErrorMessage } = useAuth();
+  const history = useHistory();
+
+  const handleOnBlur = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+
+  const handleRegister = (e) => {
+    if (loginData.password !== loginData.confirmPassword) {
+      setErrorMessage("Password Do not Match");
+      return;
+    }
+    handleRegisterUser(loginData.email, loginData.password, loginData.name, history);
+  };
+
+  const handleGoogleSignIn = (e) => {
+    googleSignIn(history);
+  };
   return (
     <div>
       <PageHeader page="Signup"></PageHeader>
@@ -18,11 +43,21 @@ const Signup = () => {
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicName">
                   <Form.Label>Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter Name" />
+                  <Form.Control
+                    onBlur={handleOnBlur}
+                    type="text"
+                    name="name"
+                    placeholder="Enter Name"
+                  />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Label>Email Address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter Email" />
+                  <Form.Control
+                    onBlur={handleOnBlur}
+                    type="email"
+                    name="email"
+                    placeholder="Enter Email"
+                  />
                   <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                   </Form.Text>
@@ -30,7 +65,12 @@ const Signup = () => {
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control
+                    onBlur={handleOnBlur}
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                  />
                 </Form.Group>
 
                 <Form.Group
@@ -38,11 +78,17 @@ const Signup = () => {
                   controlId="formBasicConfirmPassword"
                 >
                   <Form.Label>Confirm Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
+                  <Form.Control
+                    onBlur={handleOnBlur}
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirm Password"
+                  />
                 </Form.Group>
                 <Button
                   onClick={(e) => {
                     e.preventDefault();
+                    handleRegister();
                   }}
                   className="w-100"
                   variant="primary"
@@ -54,7 +100,7 @@ const Signup = () => {
                 <br />
                 <br />
                 <div className="text-center">
-                  <Button className="google-btn">
+                  <Button className="google-btn" onClick={handleGoogleSignIn}>
                     <img
                       width="20px"
                       alt="Google sign-in"
