@@ -1,4 +1,4 @@
-.purchase-form input{
+.purchase-form input, .review-form input, .review-form textarea{
     width: 100%;
     margin-bottom: 20px;
     border: none;
@@ -7,19 +7,27 @@
     border-bottom: 2px solid #06A3DA;
 }
 
-.purchase-form {
+.review-form input, .review-form textarea{
+    border-bottom: 2px solid black;
+}
+
+.purchase-form{
     width: 70%;
     border: none;
     margin-top: 10px;
     padding: 20px;
 }
 
-.purchase-form input:focus{
+.review-form{
+    border: none;
+}
+
+.purchase-form input:focus, .review-form input:focus, .review-form textarea:focus{
     border: none;
     border-bottom: 2px solid #06A3DA;
     outline: none;
 }
 
-.purchase-btn{
+.purchase-btn, .review-btn{
     background-color: #06A3DA !important;
 }

@@ -71,6 +71,8 @@
 .customized-btn2{
     background: #06A3DA;
     border: 2px solid #06A3DA;
+    border-radius: 5px;
+    color: white;
 }
 .customized-btn2:hover{
     background: #06A3DA;
