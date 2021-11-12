@@ -32,7 +32,7 @@ const useFirebase = () => {
         //update user information in firebase
         updateUserInfo(name);
         //save user on Database
-        // saveUser(email, name, password, "POST");
+        saveUser(email, name, password, "POST");
 
         setErrorMessage("");
         history.push("/");
@@ -74,26 +74,26 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
-//Sign in with google
-const googleSignIn = (history, location) => {
+  //Sign in with google
+  const googleSignIn = (history, location) => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
-        .then((result) => {
+      .then((result) => {
         const user = result.user;
         setUser(user);
         setErrorMessage("");
 
-        // saveUser(user.email, user.displayName, "", "PUT");
+        saveUser(user.email, user.displayName, "", "PUT");
         const destination = location?.state?.from || "/";
         history.push(destination);
-        })
-        .catch((error) => {
+      })
+      .catch((error) => {
         setErrorMessage(error.message);
-        })
-        .finally(() => setIsLoading(false));
-    };
+      })
+      .finally(() => setIsLoading(false));
+  };
 
-    ///Logout
+  ///Logout
   const logOut = () => {
     setIsLoading(true);
     signOut(auth)
@@ -123,6 +123,21 @@ const googleSignIn = (history, location) => {
     return () => unSubscribe;
   }, [auth]);
 
+  //function to save user on database
+  const saveUser = (email, name, password, method) => {
+    const newUser = { email, displayName: name, password };
+
+    fetch("http://localhost:5000/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
+
   return {
     user,
     isLoading,
@@ -131,7 +146,7 @@ const googleSignIn = (history, location) => {
     logOut,
     logIn,
     googleSignIn,
-    setErrorMessage
+    setErrorMessage,
   };
 };
 

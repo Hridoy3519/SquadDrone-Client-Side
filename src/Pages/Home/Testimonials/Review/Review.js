@@ -3,8 +3,6 @@ import Rating from "react-rating";
 import "./Review.css";
 const Review = (props) => {
   const { name, comment, job, rating, img } = props.review;
-
-  console.log(name);
   return (
     <div className="review">
       <div className="img-container">
