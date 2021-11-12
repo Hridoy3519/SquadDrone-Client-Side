@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Rating from "react-rating";
 import { useParams } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
+import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 import "./PurchaseOrder.css";
@@ -110,6 +111,7 @@ const PurchaseOrder = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
   );
 };

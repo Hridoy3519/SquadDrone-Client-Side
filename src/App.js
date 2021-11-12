@@ -41,7 +41,6 @@ function App() {
               <Dashboard/>
             </PrivateRoute>
           </Switch>
-          <Footer />
         </Router>
       </AuthProvider>
     </div>

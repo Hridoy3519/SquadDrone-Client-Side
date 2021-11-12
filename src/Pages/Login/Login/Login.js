@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Card, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 import "./Login.css";
@@ -79,6 +80,7 @@ const Login = () => {
           </Card>
         </div>
       </Container>
+      <Footer />
     </div>
   );
 };

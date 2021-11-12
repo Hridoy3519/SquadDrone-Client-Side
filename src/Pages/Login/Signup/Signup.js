@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import Footer from "../../Shared/Footer/Footer";
 import Navigation from "../../Shared/Navigation/Navigation";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 
@@ -135,6 +136,7 @@ const Signup = () => {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
   );
 };
