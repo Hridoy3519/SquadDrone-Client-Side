@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import Rating from "react-rating";
 import { useParams } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
+import Navigation from "../../Shared/Navigation/Navigation";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 import "./PurchaseOrder.css";
 const PurchaseOrder = () => {
@@ -47,6 +48,7 @@ const PurchaseOrder = () => {
   };
   return (
     <div>
+      <Navigation></Navigation>
       <PageHeader page="Product Details"></PageHeader>
       <Container className="my-5">
       {message && <Alert variant="success"> {message} </Alert>}

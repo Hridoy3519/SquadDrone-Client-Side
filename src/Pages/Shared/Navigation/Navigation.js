@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import "./Navigation.css";
 const Navigation = () => {
@@ -29,15 +29,32 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto nav">
-            <Nav.Link as={NavLink} style={{color: 'white'}}  to="/home">
+            <Nav.Link as={NavLink} style={{ color: "white" }} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} style={{color: 'white'}} className="nav-link" to="/explore">
+            <Nav.Link
+              as={NavLink}
+              style={{ color: "white" }}
+              className="nav-link"
+              to="/explore"
+            >
               Explore
             </Nav.Link>
-            <Nav.Link as={NavLink} style={{color: 'white'}} className="nav-link" to="/#products">
+            <Nav.Link
+              as={NavLink}
+              style={{ color: "white" }}
+              className="nav-link"
+              to="/#products"
+            >
               Products
             </Nav.Link>
+            {user.email && (
+              <NavLink to="/dashboard">
+                <Button className="dashboard-btn">
+                  <i className="fas fa-user-shield"></i> Dashboard
+                </Button>
+              </NavLink>
+            )}
           </Nav>
           <Nav className="nav">
             {user.email ? (
@@ -52,7 +69,7 @@ const Navigation = () => {
             ) : (
               <Nav.Link
                 as={NavLink}
-                style={{color: 'white'}}
+                style={{ color: "white" }}
                 className="nav-link login text-center"
                 to="/login"
               >

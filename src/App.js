@@ -11,13 +11,13 @@ import Signup from "./Pages/Login/Signup/Signup";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import PurchaseOrder from "./Pages/PurchaseOrder/PurchaseOrder/PurchaseOrder";
 import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Navigation></Navigation>
           <Switch>
             <Route exact path="/">
               <Home />
@@ -36,6 +36,9 @@ function App() {
             </Route>
             <PrivateRoute path="/purchase/:id">
               <PurchaseOrder/>
+            </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard/>
             </PrivateRoute>
           </Switch>
           <Footer />

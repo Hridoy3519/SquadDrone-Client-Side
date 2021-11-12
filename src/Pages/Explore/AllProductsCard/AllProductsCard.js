@@ -3,7 +3,7 @@ import { Button, Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./AllProductsCard.css";
 const AllProductsCard = ({ product }) => {
-  const { title, tagline, price, img } = product;
+  const { title, tagline, price, img,key } = product;
   return (
     <Col>
       <Card className="h-100 all-product-card">
@@ -18,7 +18,7 @@ const AllProductsCard = ({ product }) => {
           <div className="d-flex justify-content-between align-items-end">
             <h4 className="price-text">${price}.00</h4>
           </div>
-          <Link>
+          <Link to={`purchase/${key}`}>
             <Button className="drone-squad-customized-btn1">Purchase</Button>
           </Link>
         </Card.Footer>

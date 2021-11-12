@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import Navigation from "../../Shared/Navigation/Navigation";
 import PageHeader from "../../Shared/PageHeader/PageHeader";
 
 const Signup = () => {
@@ -37,6 +38,7 @@ const Signup = () => {
   return (
     <div>
       <PageHeader page="Signup"></PageHeader>
+      <Navigation></Navigation>
       <Container
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh" }}
