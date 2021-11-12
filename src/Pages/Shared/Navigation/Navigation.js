@@ -6,7 +6,7 @@ import "./Navigation.css";
 const Navigation = () => {
   //fixed navbar
   const [isFixed, setIsFixed] = useState(false);
-  const {user, logOut} = useAuth();
+  const { user, logOut } = useAuth();
 
   window.addEventListener("scroll", function () {
     const scrollHeight = window.pageYOffset;
@@ -28,29 +28,35 @@ const Navigation = () => {
         <Navbar.Brand href="#home">SquadDrone</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link as={NavLink} style={{ color: "white" }} to="/">
+          <Nav className="me-auto nav">
+            <Nav.Link as={NavLink} style={{color: 'white'}}  to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} style={{ color: "white" }} to="/explore">
+            <Nav.Link as={NavLink} style={{color: 'white'}} className="nav-link" to="/explore">
               Explore
             </Nav.Link>
-            <Nav.Link as={NavLink} style={{ color: "white" }} to="/#products">
+            <Nav.Link as={NavLink} style={{color: 'white'}} className="nav-link" to="/#products">
               Products
             </Nav.Link>
-            {/* <Nav.Link as={NavLink} style={{color : 'white'}} to="/login">Login</Nav.Link> */}
+          </Nav>
+          <Nav className="nav">
             {user.email ? (
-              <div className="d-flex align-items-center justify-content-between">
-                <h5 className="colored-text me-3" style={{fontSize : 18, color: "blue"}}>
-                  {user.displayName}{" "}<i className="far fa-user"></i> 
+              <div className="loggedIn-user d-flex align-items-center justify-content-between">
+                <h5 className="user-name-text me-2">
+                  <i className="fas fa-user"></i> {user.displayName}
                 </h5>
-                <button onClick={logOut} className="customized-btn2">
+                <button onClick={logOut} className="logout-btn">
                   Logout
                 </button>
               </div>
             ) : (
-              <Nav.Link className="customized-btn2" as={Link} to="/login">
-                Login
+              <Nav.Link
+                as={NavLink}
+                style={{color: 'white'}}
+                className="nav-link login text-center"
+                to="/login"
+              >
+                Log In
               </Nav.Link>
             )}
           </Nav>

@@ -126,7 +126,7 @@ const Signup = () => {
           <Col sm={12} md={7}>
             <img
               className="img-fluid"
-              width="60%"
+              width="100%"
               src="https://i.ibb.co/xY1xXzd/Mobile-login.jpg"
               alt=""
             />

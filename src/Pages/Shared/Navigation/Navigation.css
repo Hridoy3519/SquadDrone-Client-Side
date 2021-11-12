@@ -1,5 +1,6 @@
 .navbar{
     background: transparent;
+    z-index : 2;
 }
 
 .fixed-nav {
@@ -13,7 +14,6 @@
 
   .navbar .navbar-brand{
       color: black;
-      z-index: 1;
       font-size: 28px;
   }
 
@@ -24,6 +24,18 @@
 
  .fixed-nav .navbar-nav .nav-link{
       color: black !important;
+  }
+
+  .logout-btn{
+    background-color: #F65B47 ;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .user-name-text{
+    color: #F65B47;
   }
 
   @media only screen and (max-width:688px){

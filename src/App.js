@@ -10,6 +10,7 @@ import Login from "./Pages/Login/Login/Login";
 import Signup from "./Pages/Login/Signup/Signup";
 import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import PurchaseOrder from "./Pages/PurchaseOrder/PurchaseOrder/PurchaseOrder";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -33,9 +34,9 @@ function App() {
             <Route path="/signup">
               <Signup />
             </Route>
-            <Route path="/purchase/:id">
+            <PrivateRoute path="/purchase/:id">
               <PurchaseOrder/>
-            </Route>
+            </PrivateRoute>
           </Switch>
           <Footer />
         </Router>

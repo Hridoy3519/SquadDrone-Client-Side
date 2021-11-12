@@ -3,8 +3,8 @@
     margin-bottom: 20px;
     border: none;
     font-size: 18px;
-    color: #421F96;
-    border-bottom: 2px solid #421F96;
+    color: #06A3DA;
+    border-bottom: 2px solid #06A3DA;
 }
 
 .purchase-form {
@@ -16,10 +16,10 @@
 
 .purchase-form input:focus{
     border: none;
-    border-bottom: 2px solid #421F96;
+    border-bottom: 2px solid #06A3DA;
     outline: none;
 }
 
 .purchase-btn{
-    background-color: #421F96 !important;
+    background-color: #06A3DA !important;
 }
