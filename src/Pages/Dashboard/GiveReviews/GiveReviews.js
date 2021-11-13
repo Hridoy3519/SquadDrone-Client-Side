@@ -1,9 +1,10 @@
-import React from "react";
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import React, { useState } from "react";
+import { Alert, Button, Card, Col, Container, Row } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import useAuth from "../../../Hooks/useAuth";
 
 const GiveReviews = () => {
+  const [success, isSuccess] = useState(false);
   const {
     register,
     handleSubmit,
@@ -22,7 +23,7 @@ const GiveReviews = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Review Added")
+          isSuccess(true);
           reset();
         }
       });
@@ -42,6 +43,7 @@ const GiveReviews = () => {
         <Row className="d-flex justify-content-center align-items-center">
           <Col sm={12} md={7} className="w-100" style={{ maxWidth: "480px" }}>
             <Card className="review-form">
+            {success && <Alert severity="success">Admin Added Successfully!</Alert>}
               <Card.Body className="text-start">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <input
@@ -50,17 +52,17 @@ const GiveReviews = () => {
                   />
                   {errors.name && <span>This field is required</span>}
                   <input
-                    defaultValue="Job Title"
+                    placeholder="Job Title"
                     {...register("Job", { required: true })}
                   />
                   {errors.Job && <span>This field is required</span>}
                   <textarea
-                    defaultValue="Comment"
+                    placeholder="Comment"
                     {...register("comment", { required: true })}
                   />
                   {errors.comment && <span>This field is required</span>}
                   <input
-                    defaultValue="Rating between 1-5"
+                    placeholder="Rating? ex: 1-5"
                     {...register("rating", { required: true })}
                   />
                   {errors.rating && <span>This field is required</span>}

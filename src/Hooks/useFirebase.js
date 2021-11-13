@@ -8,13 +8,13 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   updateProfile,
-  getIdToken,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 initializeFirebaseAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
   //Firebase
@@ -125,7 +125,7 @@ const useFirebase = () => {
 
   //function to save user on database
   const saveUser = (email, name, password, method) => {
-    const newUser = { email, displayName: name, password };
+    const newUser = { email, displayName: name, password, role : 'user' };
 
     fetch("http://localhost:5000/users", {
       method: method,
@@ -138,10 +138,21 @@ const useFirebase = () => {
       .then((data) => console.log(data));
   };
 
+  ///check if user is Admin or not
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        
+        setIsAdmin(data.admin);
+      });
+  }, [user]);
+
   return {
     user,
     isLoading,
     errorMessage,
+    isAdmin,
     handleRegisterUser,
     logOut,
     logIn,
