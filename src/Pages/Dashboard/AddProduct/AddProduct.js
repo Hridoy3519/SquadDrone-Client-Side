@@ -29,7 +29,7 @@ const AddProduct = () => {
     <div className="form-container">
       <Card className="rounded-3">
         <Card.Header>
-          <h4>Add a New Tour Destination</h4>
+          <h4>Add a New Product</h4>
         </Card.Header>
         <Card.Body>
           {errors.title &&
@@ -87,7 +87,7 @@ const AddProduct = () => {
             />
             {/* errors will return when field validation fails  */}
 
-            <input className="add-tour" value="Add" type="submit" />
+            <input className="add-product" value="Add" type="submit" />
           </form>
         </Card.Body>
       </Card>

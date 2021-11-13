@@ -5,12 +5,12 @@ const AllOrders = (props) => {
   const { order, name, quantity, address, phone, _id, status } = props.order;
   // let {} = props.order;
   const [statusOnUi, setStatusOnUi] = useState(status);
-  const [destination, setDestination] = useState([]);
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
     fetch(`https://dry-gorge-11173.herokuapp.com/products/${order}`)
       .then((res) => res.json())
-      .then((data) => setDestination(data));
+      .then((data) => setProduct(data));
   }, []);
   return (
     <Col>
@@ -21,14 +21,14 @@ const AllOrders = (props) => {
         <div className="row g-0">
           <div className="col-md-4">
             <img
-              src={destination.img}
+              src={product.img}
               className="img-fluid all-order-img rounded-start"
               alt="..."
             />
           </div>
           <div className="col-md-8">
             <div className="card-body manage-order-card text-start">
-              <h5 className="card-title">{destination.title}</h5>
+              <h5 className="card-title">{product.title}</h5>
               <h6>
                 <small className="text-gray">Booked by: </small> {name}{" "}
               </h6>
@@ -43,7 +43,7 @@ const AllOrders = (props) => {
               </h6>
               <h5>
                 <small className="text-gray"> Total Payment:</small> $
-                {quantity * destination.price}
+                {quantity * product.price}
               </h5>
               <h6>Status: {statusOnUi}</h6>
               <button

@@ -80,12 +80,11 @@ const PurchaseOrder = () => {
             ></Rating>
             <h4 className="price-text">Price : ${price}.00</h4>
             <Card className="purchase-form shadow-lg my-4">
-              {errors.title &&
-              errors.description &&
-              errors.days &&
-              errors.people &&
-              errors.price &&
-              errors.img ? (
+              {errors.name &&
+              errors.email &&
+              errors.quantity &&
+              errors.address &&
+              errors.phone ? (
                 ""
               ) : (
                 <span className="text-danger mb-3">
