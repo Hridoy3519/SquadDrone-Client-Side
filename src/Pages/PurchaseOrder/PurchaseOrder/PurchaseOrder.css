@@ -36,4 +36,8 @@
     .purchase-form{
         width: 95%;
     }
+
+    .small-pic{
+        display: none;
+    }
 }

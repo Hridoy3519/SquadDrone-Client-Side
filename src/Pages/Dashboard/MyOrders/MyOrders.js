@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import useAuth from "../../../Hooks/useAuth";
 import Orders from "../Orders/Orders";
 import YouMayLike from "../YouMayLike/YouMayLike";
@@ -78,6 +78,7 @@ const MyOrders = () => {
             <h5 className="mt-5 text-start">
               You Currently have no orders to show
             </h5>
+            <YouMayLike products={fewProducts}></YouMayLike>
           </div>
         )}
       </div>

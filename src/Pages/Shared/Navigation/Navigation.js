@@ -38,7 +38,7 @@ const Navigation = () => {
               className="nav-link"
               to="/explore"
             >
-              Explore
+              All Products
             </Nav.Link>
             <Nav.Link
               as={NavLink}

@@ -11,8 +11,8 @@ import "./PurchaseOrder.css";
 const PurchaseOrder = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
-  const [message, setMessage] = useState('');
-  const { title, img, tagline, rating } = product;
+  const [message, setMessage] = useState("");
+  const { title, img, tagline, rating, price, description } = product;
   const { user } = useAuth();
   useEffect(() => {
     fetch(`https://dry-gorge-11173.herokuapp.com/products/${id}`)
@@ -52,10 +52,21 @@ const PurchaseOrder = () => {
       <Navigation></Navigation>
       <PageHeader page="Product Details"></PageHeader>
       <Container className="my-5">
-      {message && <Alert variant="success"> {message} </Alert>}
+        {message && <Alert variant="success"> {message} </Alert>}
         <Row>
           <Col sm={12} md={5}>
             <img className="img-fluid" src={img} alt="" />
+            <Row className="mt-3 small-pic">
+              <Col sm={4} className="text-center">
+                <img src="https://i.ibb.co/wWFd0MC/small1.jpg" alt="" />
+              </Col>
+              <Col sm={4} className="text-center">
+                <img src="https://i.ibb.co/wWFd0MC/small1.jpg" alt="" />
+              </Col>
+              <Col sm={4} className="text-center">
+                <img src="https://i.ibb.co/wWFd0MC/small1.jpg" alt="" />
+              </Col>
+            </Row>
           </Col>
           <Col sm={12} md={7} className="text-start">
             <h4>
@@ -67,6 +78,7 @@ const PurchaseOrder = () => {
               fullSymbol="fas fa-star"
               readonly
             ></Rating>
+            <h4 className="price-text">Price : ${price}.00</h4>
             <Card className="purchase-form shadow-lg my-4">
               {errors.title &&
               errors.description &&
@@ -110,6 +122,10 @@ const PurchaseOrder = () => {
             </Card>
           </Col>
         </Row>
+        <div className="text-start">
+          <h2>Product Description : </h2>
+          <p>{description}</p>
+        </div>
       </Container>
       <Footer />
     </div>
