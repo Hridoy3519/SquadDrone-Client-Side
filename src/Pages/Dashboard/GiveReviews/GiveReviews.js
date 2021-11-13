@@ -43,7 +43,7 @@ const GiveReviews = () => {
         <Row className="d-flex justify-content-center align-items-center">
           <Col sm={12} md={7} className="w-100" style={{ maxWidth: "480px" }}>
             <Card className="review-form">
-            {success && <Alert severity="success">Admin Added Successfully!</Alert>}
+            {success && <Alert severity="success">Review Added Successfully!</Alert>}
               <Card.Body className="text-start">
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <input
@@ -53,7 +53,7 @@ const GiveReviews = () => {
                   {errors.name && <span>This field is required</span>}
                   <input
                     placeholder="Job Title"
-                    {...register("Job", { required: true })}
+                    {...register("job", { required: true })}
                   />
                   {errors.Job && <span>This field is required</span>}
                   <textarea
