@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Card, Col, Container, Form, Row } from "react-bootstrap";
+import { Alert, Button, Card, Col, Container, Form, Row } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 import Footer from "../../Shared/Footer/Footer";
@@ -8,7 +8,7 @@ import PageHeader from "../../Shared/PageHeader/PageHeader";
 
 const Signup = () => {
   const [loginData, setLoginData] = useState({});
-  const { googleSignIn, handleRegisterUser, setErrorMessage } = useAuth();
+  const { googleSignIn, handleRegisterUser, setErrorMessage, errorMessage } = useAuth();
   const history = useHistory();
 
   const handleOnBlur = (e) => {
@@ -49,6 +49,7 @@ const Signup = () => {
             <Card>
               <Card.Body className="text-start">
                 <h2 className="text-center mb-4">Sign Up</h2>
+                {errorMessage && <Alert variant="danger"> {errorMessage} </Alert>}
                 <Form>
                   <Form.Group className="mb-3" controlId="formBasicName">
                     <Form.Label>Name</Form.Label>
@@ -142,5 +143,3 @@ const Signup = () => {
 };
 
 export default Signup;
-
-//{error && <Alert variant="danger"> {error} </Alert>}

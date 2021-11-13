@@ -35,7 +35,7 @@ const Orders = (props) => {
                   onClick={() => props.handleDelete(_id)}
                   className="customized-btn2"
                 >
-                  Cancel Tour
+                  Cancel Order
                 </button>
               </div>
               <div>
