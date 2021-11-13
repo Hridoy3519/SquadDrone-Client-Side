@@ -10,17 +10,19 @@ const AboutDrone = () => {
             <h2>A CONTROLLER SMARTER THAN MOST DRONE</h2>
             <br></br>
             <p>
-              Everybody pulled his weight. Gee our old Lasalle ran great. Those
-              were the days. You wanna be where you can see our troubles are all
-              the same. You wanna be where everybody knows Your name. I have
-              always wanted to have a neighbor just like you. I’ve always wanted
-              to live in a neighborhood with you
+              Whether you call them Unmanned Aerial Vehicles (UAVs), Miniature
+              Pilotless Aircraft or Flying Mini Robots, drones are rapidly
+              growing in popularity. They are still in the infancy stage in
+              terms of mass adoption and usage, but drones have already broken
+              through rigid traditional barriers in industries which otherwise
+              seemed impenetrable by similar technological innovations.
             </p>
             <br></br>
             <p>
-              Hills that is. Swimmin’ pools movie stars. Makin’ your way in the
-              world today takes everything you’ve got. Takin’ a break from all
-              your worries sure would help a lot.
+              Whether these unmanned aircrafts are controlled by a remote or
+              accessed via a smartphone app, they possess the capability of
+              reaching the most remote areas with little to no manpower needed
+              and require the least amount of effort, time, and energy.
             </p>
           </div>
 
@@ -29,24 +31,23 @@ const AboutDrone = () => {
               <img src="https://i.ibb.co/wWFd0MC/small1.jpg" alt="" />
               <h4>Preflight</h4>
               <p>
-                Travelled down the road and back again. Your heart is true
-                you're a confidant.
+                Increasing work efficiency and productivity, decreasing workload
+                and production costs.
               </p>
             </Col>
             <Col sm={4} className="text-center">
               <img src="https://i.ibb.co/wWFd0MC/small1.jpg" alt="" />
               <h4>Preflight</h4>
               <p>
-                Travelled down the road and back again. Your heart is true
-                you're a confidant.
+                Improving accuracy, refining service and customer relations,
               </p>
             </Col>
             <Col sm={4} className="text-center">
               <img src="https://i.ibb.co/wWFd0MC/small1.jpg" alt="" />
               <h4>Preflight</h4>
               <p>
-                Travelled down the road and back again. Your heart is true
-                you're a confidant.
+                Resolving security issues on a vast scale are a few of the
+                top uses drones offer industries globally.
               </p>
             </Col>
           </Row>
