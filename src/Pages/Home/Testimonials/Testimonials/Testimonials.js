@@ -9,7 +9,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/reviews"
+      "https://dry-gorge-11173.herokuapp.com/reviews"
     )
       .then((res) => res.json())
       .then((data) => setReviews(data));

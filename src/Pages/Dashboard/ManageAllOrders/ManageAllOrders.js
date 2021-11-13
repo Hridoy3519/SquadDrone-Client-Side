@@ -5,7 +5,7 @@ const ManageAllOrders = () => {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/orders")
+    fetch("https://dry-gorge-11173.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -13,7 +13,7 @@ const ManageAllOrders = () => {
   const handleDelete = (id) => {
     const isConfirm = window.confirm("Are You Sure?");
     if (isConfirm) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://dry-gorge-11173.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -29,7 +29,7 @@ const ManageAllOrders = () => {
   };
 
   const handleUpdate = (id) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://dry-gorge-11173.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "PUT",
     })

@@ -127,7 +127,7 @@ const useFirebase = () => {
   const saveUser = (email, name, password, method) => {
     const newUser = { email, displayName: name, password, role : 'user' };
 
-    fetch("http://localhost:5000/users", {
+    fetch("https://dry-gorge-11173.herokuapp.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -140,7 +140,7 @@ const useFirebase = () => {
 
   ///check if user is Admin or not
   useEffect(() => {
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://dry-gorge-11173.herokuapp.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         

@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   const makeAdmin = (e) => {
     const user = { email };
 
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://dry-gorge-11173.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -30,7 +30,7 @@ const MakeAdmin = () => {
   };
 
   useEffect(() => {
-      fetch('http://localhost:5000/users/admin')
+      fetch('https://dry-gorge-11173.herokuapp.com/users/admin')
       .then(res => res.json())
       .then(data => setAdmins(data));
   },[])

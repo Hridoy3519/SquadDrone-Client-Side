@@ -6,7 +6,7 @@ const ManageProducts = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://dry-gorge-11173.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => {
         setAllProducts(data);
@@ -16,7 +16,7 @@ const ManageProducts = () => {
   const handleDeleteProduct = (id) => {
     const isConfirm = window.confirm("Are You Sure?");
     if (isConfirm) {
-      const url = `http://localhost:5000/products/${id}`;
+      const url = `https://dry-gorge-11173.herokuapp.com/products/${id}`;
       fetch(url, {
         method: "DELETE",
       })

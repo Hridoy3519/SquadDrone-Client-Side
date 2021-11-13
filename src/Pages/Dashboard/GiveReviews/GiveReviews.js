@@ -13,7 +13,7 @@ const GiveReviews = () => {
   } = useForm();
   const onSubmit = (data) => {
     data.img = 'https://i.ibb.co/qD85sL9/user-review.jpg'
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://dry-gorge-11173.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",

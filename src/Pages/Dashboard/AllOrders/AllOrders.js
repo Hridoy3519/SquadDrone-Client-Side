@@ -8,7 +8,7 @@ const AllOrders = (props) => {
   const [destination, setDestination] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${order}`)
+    fetch(`https://dry-gorge-11173.herokuapp.com/products/${order}`)
       .then((res) => res.json())
       .then((data) => setDestination(data));
   }, [order]);

@@ -15,7 +15,7 @@ const PurchaseOrder = () => {
   const { title, img, tagline, rating } = product;
   const { user } = useAuth();
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://dry-gorge-11173.herokuapp.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data));
   }, [id]);
@@ -32,7 +32,7 @@ const PurchaseOrder = () => {
     data.email = user.email;
     data.order = id;
     data.status = "pending";
-    fetch("http://localhost:5000/orders", {
+    fetch("https://dry-gorge-11173.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
