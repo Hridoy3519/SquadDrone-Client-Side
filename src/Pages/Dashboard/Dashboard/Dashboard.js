@@ -19,6 +19,8 @@ import useAuth from "../../../Hooks/useAuth";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import AddProduct from "../AddProduct/AddProduct";
+import ManageProducts from "../ManageProducts/ManageProducts";
 
 const drawerWidth = 200;
 
@@ -79,7 +81,10 @@ function Dashboard(props) {
                 Home
               </Button>
             </NavLink>
-            <NavLink style={{ textDecoration: "none" }} to={`${url}/manageOrders`}>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={`${url}/manageOrders`}
+            >
               <Button sx={{ width: 130, mb: 2 }} variant="text">
                 Manage Orders
               </Button>
@@ -87,6 +92,22 @@ function Dashboard(props) {
             <NavLink style={{ textDecoration: "none" }} to={`${url}/makeAdmin`}>
               <Button sx={{ width: 130, mb: 2 }} variant="text">
                 Make Admin
+              </Button>
+            </NavLink>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={`${url}/addProduct`}
+            >
+              <Button sx={{ width: 130, mb: 2 }} variant="text">
+                Add Product
+              </Button>
+            </NavLink>
+            <NavLink
+              style={{ textDecoration: "none" }}
+              to={`${url}/manageProducts`}
+            >
+              <Button sx={{ width: 130, mb: 2 }} variant="text">
+                Manage Products
               </Button>
             </NavLink>
             <Button onClick={logOut} sx={{ width: 130, mb: 2 }} variant="text">
@@ -187,7 +208,13 @@ function Dashboard(props) {
             <MakeAdmin />
           </AdminRoute>
           <AdminRoute path={`${path}/manageOrders`}>
-            <ManageAllOrders/>
+            <ManageAllOrders />
+          </AdminRoute>
+          <AdminRoute path={`${path}/addProduct`}>
+            <AddProduct />
+          </AdminRoute>
+          <AdminRoute path={`${path}/manageProducts`}>
+            <ManageProducts/>
           </AdminRoute>
         </Switch>
       </Box>
