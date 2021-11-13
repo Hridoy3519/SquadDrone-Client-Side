@@ -39,9 +39,9 @@ function App() {
             <PrivateRoute path="/dashboard">
               <Dashboard/>
             </PrivateRoute>
-            <PrivateRoute path="*">
+            <Route path="*">
               <NotFound/>
-            </PrivateRoute>
+            </Route>
           </Switch>
         </Router>
       </AuthProvider>
