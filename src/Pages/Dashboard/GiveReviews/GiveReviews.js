@@ -33,9 +33,9 @@ const GiveReviews = () => {
   console.log(user);
   return (
     <div>
-      <h3 style={{ color: "#06A3DA" }}>
+      <h5 style={{ color: "#06A3DA" }}>
         Give us a Review, so we can make our service Better.
-      </h3>
+      </h5>
       <Container
         className="d-flex align-items-center justify-content-center"
         style={{ minHeight: "100vh" }}
@@ -62,7 +62,7 @@ const GiveReviews = () => {
                   />
                   {errors.comment && <span>This field is required</span>}
                   <input
-                    placeholder="Rating? ex: 1-5"
+                    placeholder="Rating? between: 1-5"
                     {...register("rating", { required: true })}
                   />
                   {errors.rating && <span>This field is required</span>}

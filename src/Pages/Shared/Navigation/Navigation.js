@@ -50,7 +50,7 @@ const Navigation = () => {
             </Nav.Link>
             {user.email && (
               <NavLink to="/dashboard">
-                <Button className="dashboard-btn">
+                <Button className="customized-btn2">
                   <i className="fas fa-user-shield"></i> Dashboard
                 </Button>
               </NavLink>

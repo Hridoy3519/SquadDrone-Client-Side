@@ -11,7 +11,7 @@ const AllOrders = (props) => {
     fetch(`https://dry-gorge-11173.herokuapp.com/products/${order}`)
       .then((res) => res.json())
       .then((data) => setDestination(data));
-  }, [order]);
+  }, []);
   return (
     <Col>
       <div

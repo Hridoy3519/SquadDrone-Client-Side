@@ -31,3 +31,9 @@
 .purchase-btn, .review-btn{
     background-color: #06A3DA !important;
 }
+
+@media only screen and (max-width:688px) {
+    .purchase-form{
+        width: 95%;
+    }
+}

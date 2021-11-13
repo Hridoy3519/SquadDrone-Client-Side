@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Carousel } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./HomeBanner.css";
 const HomeBanner = () => {
   return (
@@ -14,7 +15,9 @@ const HomeBanner = () => {
           <h1>ENJOY THE MOST CINEMATIC EXPERIENCE</h1>
           <p>Our Drone's uses cutting edge Technologies &</p>
           <p>Products to get the best result</p>
-          <Button className="mt-3">Explore</Button>
+          <Link to="/explore">
+            <Button className="mt-3 customized-btn2">Explore</Button>
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -25,10 +28,12 @@ const HomeBanner = () => {
         />
 
         <Carousel.Caption>
-          <h1>ENJOY THE MOST CINEMATIC EXPERIENCE</h1>
+          <h1>Capture the Moment's You Cherish</h1>
           <p>Our Drone's uses cutting edge Technologies &</p>
           <p>Products to get the best result</p>
-          <Button className="mt-3">Explore</Button>
+          <Link to="/explore">
+            <Button className="mt-3 customized-btn2">Explore</Button>
+          </Link>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -39,10 +44,10 @@ const HomeBanner = () => {
         />
 
         <Carousel.Caption>
-          <h1>ENJOY THE MOST CINEMATIC EXPERIENCE</h1>
+          <h1>Explore The Epic Bird Eye View</h1>
           <p>Our Drone's uses cutting edge Technologies &</p>
           <p>Products to get the best result</p>
-          <Button className="mt-3">Explore</Button>
+          <Button className="mt-3 customized-btn2">Explore</Button>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
@@ -50,14 +55,3 @@ const HomeBanner = () => {
 };
 
 export default HomeBanner;
-
-{
-  /* <div className="banner d-flex justify-content-center align-items-end">
-            <div className="banner-description text-white mb-5">
-                <h3>Our Drone's uses cutting edge Technologies &</h3>
-                <h3>Products to get the best result</h3>
-
-                <Button>Explore</Button>
-            </div>
-        </div> */
-}

@@ -37,7 +37,7 @@ const MakeAdmin = () => {
   return (
     <div>
       <h3 className="heading-color">Admin Panel</h3>
-      <Table striped bordered hover variant="dark">
+      <Table responsive striped bordered hover variant="dark" className="admin-table">
         <thead>
           <tr>
             <th>#</th>
@@ -52,7 +52,7 @@ const MakeAdmin = () => {
         </tbody>
       </Table>
       {success && <Alert severity="success">Admin Added Successfully!</Alert>}
-      <div className="text-start w-50 makeAdmin">
+      <div className="text-start makeAdmin">
         <h3>Make Admin : </h3>
         <input
           class="form-control"

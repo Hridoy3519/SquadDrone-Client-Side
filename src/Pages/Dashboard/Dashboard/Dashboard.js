@@ -17,7 +17,6 @@ import MyOrders from "../MyOrders/MyOrders";
 import GiveReviews from "../GiveReviews/GiveReviews";
 import useAuth from "../../../Hooks/useAuth";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
-import AdminRoute from "../AdminRoute/AdminRoute";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import AddProduct from "../AddProduct/AddProduct";
 import ManageProducts from "../ManageProducts/ManageProducts";
@@ -195,6 +194,11 @@ function Dashboard(props) {
       >
         <Toolbar />
         <Switch>
+          <Route exact path={`${path}`}>
+            <div className="d-flex justify-content-center align-items-center">
+              <h4>Welcome to The Dashboard of Squad Drone Webpage</h4>
+            </div>
+          </Route>
           <Route path={`${path}/makePayment`}>
             <MakePayment />
           </Route>
@@ -204,18 +208,18 @@ function Dashboard(props) {
           <Route path={`${path}/giveReviews`}>
             <GiveReviews />
           </Route>
-          <AdminRoute path={`${path}/makeAdmin`}>
+          <Route path={`${path}/makeAdmin`}>
             <MakeAdmin />
-          </AdminRoute>
-          <AdminRoute path={`${path}/manageOrders`}>
+          </Route>
+          <Route path={`${path}/manageOrders`}>
             <ManageAllOrders />
-          </AdminRoute>
-          <AdminRoute path={`${path}/addProduct`}>
+          </Route>
+          <Route path={`${path}/addProduct`}>
             <AddProduct />
-          </AdminRoute>
-          <AdminRoute path={`${path}/manageProducts`}>
-            <ManageProducts/>
-          </AdminRoute>
+          </Route>
+          <Route path={`${path}/manageProducts`}>
+            <ManageProducts />
+          </Route>
         </Switch>
       </Box>
     </Box>

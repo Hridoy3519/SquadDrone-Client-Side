@@ -2,3 +2,18 @@
     border: 0;
     border-bottom: 2px solid #06A3DA;
 }
+
+.makeAdmin{
+    width: 50%;
+}
+
+@media only screen and (max-width:688px) {
+
+    .makeAdmin{
+        width: 95%;
+    }
+
+    .MuiBox-root{
+        padding: 10px 0 !important;
+    }
+}
